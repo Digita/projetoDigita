@@ -1,0 +1,243 @@
+﻿@model projDigita.Models.PlayerMenu
+@{
+    ViewBag.Title = "Menu";
+}
+<script>
+	window.onload = function () {
+		var i = 0;
+
+		if ("@Model.Fases[0].solucao1" == "True") {
+			i++;
+			document.getElementById("estrela_x5F_1").setAttribute("fill", "#FFFF21");
+		}
+		if ("@Model.Fases[0].solucao2" == "True") {
+			i++;
+			document.getElementById("estrela_x5F_2").setAttribute("fill", "#FFFF21");
+		}
+		if ("@Model.Fases[0].solucao3" == "True") {
+			i++;
+			document.getElementById("estrela_x5F_3").setAttribute("fill", "#FFFF21");
+		}
+		if ("@Model.Fases[0].solucao4" == "True") {
+			i++;
+			document.getElementById("estrela_x5F_4").setAttribute("fill", "#FFFF21");
+		}
+		if ("@Model.Fases[0].solucao5" == "True") {
+			i++;
+			document.getElementById("estrela_x5F_5").setAttribute("fill", "#FFFF21");
+		}
+		if (i > 1) {
+			document.getElementById("fase_x5F_2").style.visibility = "visible";
+		}
+	};
+
+	function entrarFase(fase) {
+
+		document.getElementById('Escolida').setAttribute("value", fase);
+	
+		document.getElementsByTagName('form')[0].submit();
+	} 
+</script>
+
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="960px" height="560px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
+	<g id="fundo_2_" style="cursor: default;">
+	
+		<radialGradient id="SVGID_1_" cx="481.0403" cy="562.8105" r="393.5486" gradientTransform="matrix(1 0 0 1 -0.04 -282.8105)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0" style="stop-color:#B1D689"/>
+			<stop  offset="0.0791" style="stop-color:#A9D37E"/>
+			<stop  offset="0.2988" style="stop-color:#98CC63"/>
+			<stop  offset="0.5235" style="stop-color:#8CC750"/>
+			<stop  offset="0.7542" style="stop-color:#84C445"/>
+			<stop  offset="1" style="stop-color:#82C341"/>
+		</radialGradient>
+		<polygon fill="url(#SVGID_1_)" points="962,560 2,560 0,0 960,0 	"/>
+		<g>
+			<g>
+				<polygon fill="#FABFA9" stroke="#000000" stroke-miterlimit="10" points="178.519,405.021 179.208,488.638 201.251,483.07 
+					197.348,402.566 			"/>
+				<polygon fill="#FABFA9" stroke="#000000" stroke-miterlimit="10" points="126.165,417.884 126.854,474.859 148.897,470.697 
+					144.995,416.047 			"/>
+				<polygon fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="169.5,502.5 223.984,502.5 236.5,493.9 236.5,502.855 
+					224.903,508.5 169.5,508.5 			"/>
+				<polygon fill="#603813" stroke="#000000" stroke-miterlimit="10" points="200.219,481.5 196.889,460.5 203.318,460.5 
+					204.726,481.5 			"/>
+				<polygon fill="#603813" stroke="#000000" stroke-miterlimit="10" points="175.763,475.5 204.696,475.5 237.072,494.345 
+					235.092,496.877 222.607,505.254 170.942,501.288 			"/>
+				<polygon fill="#603813" stroke="#000000" stroke-miterlimit="10" points="117.899,467.479 124.787,480.8 148.209,478.044 
+					159.525,464.725 135.809,460.593 			"/>
+				<polygon fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="113.5,504.234 113.5,512.5 151.747,514.324 
+					163.5,509.278 163.5,500.101 151.832,505.141 			"/>
+				<polygon fill="#603813" stroke="#000000" stroke-miterlimit="10" points="117.899,479.196 124.787,480.917 148.209,478.104 
+					159.525,474.859 164.052,500.758 159.525,508.5 117.899,508.5 114.455,504.643 			"/>
+				<rect x="125" y="497" width="23" height="4"/>
+				<rect x="125" y="491" width="23" height="2"/>
+				<rect x="125" y="485" width="23" height="2"/>
+				<polygon fill="#2E3192" stroke="#000000" stroke-miterlimit="10" points="154.795,419.268 194.593,426.614 212.856,412.378 
+					191.78,329.714 144.995,346.247 			"/>
+				<polygon fill="#2E3192" stroke="#000000" stroke-miterlimit="10" points="108.714,343.031 103.204,422.94 133.973,429.835 
+					166.98,423.858 162.97,336.377 			"/>
+				<polygon fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="107.795,274.046 103.204,352.678 162.281,357.271 
+					207.48,345.791 197.348,263.131 186.92,242.92 150.964,230.979 114.226,245.217 			"/>
+				<polygon fill="#FABFA9" stroke="#000000" stroke-miterlimit="10" points="102.513,278.285 85.934,326.504 101.5,370.131 
+					101.5,384.371 111.651,394.471 120.516,390.796 114.155,382.989 124.294,394.471 133.955,386.662 119.76,380.232 134.5,387.123 
+					134.5,373.35 123.789,369.211 130.717,362.782 127.752,354.518 116.856,359.568 103.14,325.584 124.756,287.467 			"/>
+				<polygon fill="#FF0000" stroke="#000000" stroke-miterlimit="10" points="100.677,249.807 86.67,289.302 129.839,310.427 
+					141.779,266.8 124.328,240.42 			"/>
+			</g>
+			<polygon fill="#FABFA9" points="106.019,166.854 110.836,118.686 199.949,113.526 204.249,121.782 211.092,208.308 
+				174.386,243.408 144.786,245.93 107.567,218.291 108.083,184.9 94.477,177.865 95.525,168.748 		"/>
+			<polygon points="156.819,195.621 170.806,191.619 165.147,176.935 174.386,192.866 		"/>
+			<polygon fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" points="136.104,208.896 139.839,225.602 164.607,223.717 
+				185.382,211.789 163.14,214.214 		"/>
+			<polygon fill="#FFFF00" stroke="#000000" stroke-miterlimit="10" points="208.664,170.26 216.234,173.447 212.276,119.953 
+				219.033,102.333 230.464,104.717 211.74,92.648 192.5,105.034 192.5,87.5 212.962,87.5 178.175,78.874 165.602,98.326 
+				153.074,83.941 174.386,69.689 142.01,74.103 130.642,94.046 119.277,80.598 146.831,65.777 100.333,69.562 88.277,92.292 
+				96.543,112.267 74.5,130.521 74.5,165.31 86.555,181.5 83.283,202.165 100.935,197 108.3,205.605 106.903,186.936 93.5,180.466 
+				93.5,169.445 106.733,165.826 111.283,181.843 115.28,177.021 123.047,179.432 113.928,159.801 116.172,125.528 159.229,121.052 
+				174.385,136.379 176.451,121.224 188.334,131.9 186.957,120.362 191.607,125.184 193.502,120.362 204.868,127.596 		"/>
+			<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="107.672,166.69 94,169.445 94,179.777 
+				108.193,186.842 108.146,219.398 144.726,247.307 174.399,244.229 211.655,209.139 204.741,126.562 		"/>
+			<polygon points="127.543,154 148.209,154 156.819,159 124.787,159 		"/>
+			<polygon points="173.086,158.422 176.318,152.859 196.863,149.857 198.71,154.139 		"/>
+			<polygon fill="#FFFFFF" points="133.191,178.037 131.145,167.536 150.35,168.124 151.408,174.887 141.949,180.162 		"/>
+			<circle fill="#0071BC" cx="141.654" cy="172.397" r="4.86"/>
+			<polygon points="128.619,167.619 154.479,169.086 141.167,165.914 132.514,167.089 		"/>
+			<polygon fill="#FFFFFF" points="194.916,176.19 196.534,165.607 177.519,167.229 176.823,174.039 186.417,178.793 		"/>
+			<circle fill="#0071BC" cx="186.165" cy="171.007" r="4.861"/>
+			<polygon points="198.926,165.47 173.751,168.371 186.589,164.462 195.095,165.157 		"/>
+		</g>
+		<polygon fill="#FCEE21" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="870.195,489.991 875.4,500.537 
+			887.037,502.228 878.615,510.438 880.605,522.029 870.195,516.557 859.783,522.029 861.774,510.438 853.353,502.228 
+			864.99,500.537 	"/>
+		<polygon fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-miterlimit="10" points="295.233,113.623 337.635,109.572 
+			346.015,125.542 364.01,136 711.71,136 733,120.3 733,36.306 697.601,19.603 350.729,25.43 326,40.082 326,92.632 	"/>
+		<polygon fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-miterlimit="10" points="248,483 261.867,461 436.934,461 
+			456,483 452.531,531 445.6,547 260.133,541 249.733,527 	"/>
+		<text transform="matrix(1 0 0 1 325.575 516.25)" font-family="'KomikaAxis'" font-size="21">fácil</text>
+		<text transform="matrix(1 0 0 1 383.8279 516.25)" font-family="'MyriadPro-Regular'" font-size="21"> </text>
+		<text transform="matrix(1 0 0 1 742.6877 523.002)" font-family="'KomikaAxis'" font-size="22.1864">pontos:</text>
+		<text transform="matrix(1 0 0 1 841.0159 523.002)" font-family="'MyriadPro-Regular'" font-size="22.1864"> </text>
+		<text transform="matrix(1 0 0 1 375.0759 90.7998)" font-family="'KomikaAxis'" font-size="35.7738">escolha a fase:</text>
+		<text transform="matrix(1 0 0 1 686.9124 90.7998)" font-family="'MyriadPro-Regular'" font-size="35.7738"> </text>
+		<polygon fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-miterlimit="10" points="485,485 498.865,463 673.934,463 
+			693,485 689.531,533 682.6,549 497.133,543 486.733,529 	"/>
+		<text transform="matrix(1 0 0 1 514.9749 517.2393)" font-family="'KomikaAxis'" font-size="21">avançado</text>
+		<text transform="matrix(1 0 0 1 633.0774 517.2393)" font-family="'MyriadPro-Regular'" font-size="21"> </text>
+		<g>
+			<rect x="481" y="179" fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-miterlimit="10" width="210" height="123"/>
+			<path d="M605.344,230.634c0.078-3.24,0.094-7.504,0.094-11.634c0-10.028-8.779-18.5-19.281-18.5
+				C575.367,200.5,566,209.145,566,219v12.864c-2,1.815-3,4.34-3,7.136v27c0,5.523,4.228,10,9.75,10h27c5.521,0,10.25-4.477,10.25-10
+				v-27C610,235.497,608.07,232.419,605.344,230.634z M592.604,266h-12.709l1.756-10.885c-2.113-1.462-3.5-4.252-3.5-7.017
+				c0-4.472,3.627-8.098,8.1-8.098c4.474,0,8.101,3.626,8.101,8.098c0,2.764-1.387,5.555-3.5,7.017L592.604,266z M598.254,229H573
+				v-10c0-6.477,6.996-11.5,13.125-11.5c6.593,0,12.313,5.374,12.313,11.5C598.438,222.474,598.318,226.041,598.254,229z"/>
+		</g>
+		<g>
+			<rect x="713" y="179" fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-miterlimit="10" width="210" height="123"/>
+			<path d="M837.344,230.634c0.078-3.24,0.094-7.504,0.094-11.634c0-10.028-8.779-18.5-19.281-18.5
+				C807.367,200.5,798,209.145,798,219v12.864c-2,1.815-3,4.34-3,7.136v27c0,5.523,4.228,10,9.75,10h27c5.521,0,10.25-4.477,10.25-10
+				v-27C842,235.497,840.07,232.419,837.344,230.634z M824.604,266h-12.709l1.756-10.885c-2.113-1.462-3.5-4.252-3.5-7.017
+				c0-4.472,3.627-8.098,8.1-8.098c4.474,0,8.101,3.626,8.101,8.098c0,2.764-1.387,5.555-3.5,7.017L824.604,266z M830.254,229H805
+				v-10c0-6.477,6.996-11.5,13.125-11.5c6.593,0,12.313,5.374,12.313,11.5C830.438,222.474,830.318,226.041,830.254,229z"/>
+		</g>
+		<g>
+			<rect x="245" y="316" fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-miterlimit="10" width="210" height="123"/>
+			<path d="M369.344,367.634c0.078-3.239,0.094-7.504,0.094-11.634c0-10.027-8.779-18.5-19.281-18.5
+				C339.367,337.5,330,346.145,330,356v12.864c-2,1.815-3,4.34-3,7.136v27c0,5.523,4.228,10,9.75,10h27c5.521,0,10.25-4.477,10.25-10
+				v-27C374,372.497,372.07,369.42,369.344,367.634z M356.604,403h-12.709l1.756-10.885c-2.113-1.463-3.5-4.252-3.5-7.018
+				c0-4.473,3.627-8.1,8.101-8.1c4.473,0,8.1,3.627,8.1,8.1c0,2.766-1.387,5.555-3.5,7.018L356.604,403z M362.254,366H337v-10
+				c0-6.477,6.996-11.5,13.125-11.5c6.593,0,12.313,5.374,12.313,11.5C362.438,359.475,362.318,363.041,362.254,366z"/>
+		</g>
+		<g>
+			<rect x="481" y="316" fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-miterlimit="10" width="210" height="123"/>
+			<path d="M605.344,367.634c0.078-3.239,0.094-7.504,0.094-11.634c0-10.027-8.779-18.5-19.281-18.5
+				C575.367,337.5,566,346.145,566,356v12.864c-2,1.815-3,4.34-3,7.136v27c0,5.523,4.228,10,9.75,10h27c5.521,0,10.25-4.477,10.25-10
+				v-27C610,372.497,608.07,369.42,605.344,367.634z M592.604,403h-12.709l1.756-10.885c-2.113-1.463-3.5-4.252-3.5-7.018
+				c0-4.473,3.627-8.1,8.1-8.1c4.474,0,8.101,3.627,8.101,8.1c0,2.766-1.387,5.555-3.5,7.018L592.604,403z M598.254,366H573v-10
+				c0-6.477,6.996-11.5,13.125-11.5c6.593,0,12.313,5.374,12.313,11.5C598.438,359.475,598.318,363.041,598.254,366z"/>
+		</g>
+		<g>
+			<rect x="713" y="316" fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-miterlimit="10" width="210" height="123"/>
+			<path d="M837.344,367.634c0.078-3.239,0.094-7.504,0.094-11.634c0-10.027-8.779-18.5-19.281-18.5
+				C807.367,337.5,798,346.145,798,356v12.864c-2,1.815-3,4.34-3,7.136v27c0,5.523,4.228,10,9.75,10h27c5.521,0,10.25-4.477,10.25-10
+				v-27C842,372.497,840.07,369.42,837.344,367.634z M824.604,403h-12.709l1.756-10.885c-2.113-1.463-3.5-4.252-3.5-7.018
+				c0-4.473,3.627-8.1,8.1-8.1c4.474,0,8.101,3.627,8.101,8.1c0,2.766-1.387,5.555-3.5,7.018L824.604,403z M830.254,366H805v-10
+				c0-6.477,6.996-11.5,13.125-11.5c6.593,0,12.313,5.374,12.313,11.5C830.438,359.475,830.318,363.041,830.254,366z"/>
+		</g>
+	</g>
+	<text id="pontuacao" transform="matrix(1 0 0 1 903.217 524.501)" font-family="'KomikaAxis'" font-size="22.1864">@Model.Pontos</text>
+	<g id="fase_x5F_1">
+		<g id="fundo">
+			<image overflow="visible" enable-background="new    " width="210" height="123" xlink:href="@Url.Content("~")Content/Imagens/fase1.jpg"  transform="matrix(1 0 0 1 244.0774 181.1396)">
+			</image>
+			<rect x="245" y="179" fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" width="210" height="123"/>
+		
+			
+		</g>
+		<polygon id="estrela_x5F_1" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="285.791,188.992 
+			294.183,205.996 312.948,208.723 299.368,221.96 302.574,240.65 285.791,231.826 269.006,240.65 272.212,221.96 258.632,208.723 
+			277.398,205.996 	"/>
+		<polygon id="estrela_x5F_2" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="350.789,188.992 
+			359.183,205.996 377.948,208.723 364.368,221.96 367.574,240.65 350.789,231.826 334.006,240.65 337.212,221.96 323.632,208.723 
+			342.398,205.996 	"/>
+		<polygon id="estrela_x5F_3" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="416.789,188.992 
+			425.183,205.996 443.948,208.723 430.368,221.96 433.574,240.65 416.789,231.826 400.006,240.65 403.212,221.96 389.632,208.723 
+			408.398,205.996 	"/>
+		<polygon id="estrela_x5F_4" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="321.789,241.992 
+			330.183,258.996 348.948,261.723 335.368,274.96 338.574,293.65 321.789,284.826 305.006,293.65 308.212,274.96 294.632,261.723 
+			313.398,258.996 	"/>
+		<polygon id="estrela_x5F_5" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="386.789,241.992 
+			395.183,258.996 413.948,261.723 400.368,274.96 403.574,293.65 386.789,284.826 370.006,293.65 373.212,274.96 359.632,261.723 
+			378.398,258.996 	"/>
+	
+		<rect id="hit" style="cursor: pointer;" onclick="entrarFase(0)" x="245" y="179" opacity="0" fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-miterlimit="10" enable-background="new    " width="210" height="123"/>
+	</g>
+	<g id="fase_x5F_2" style="visibility: hidden;" >
+		<g id="fundo_1_">
+			<image overflow="visible" enable-background="new    " width="210" height="123" xlink:href="@Url.Content("~")Content/Imagens/fase2.jpg"  transform="matrix(1 0 0 1 481.0286 181.1396)">
+			</image>
+			<rect x="481.951" y="179" fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" width="210" height="123"/>
+		
+			
+		</g>
+		<polygon id="estrela_x5F_1_1_" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="522.742,188.992 
+		531.134,205.996 549.899,208.723 536.32,221.96 539.526,240.65 522.742,231.826 505.957,240.65 509.163,221.96 495.583,208.723 
+		514.349,205.996 	"/>
+		<polygon id="estrela_x5F_2_1_" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="587.74,188.992 
+		596.134,205.996 614.899,208.723 601.32,221.96 604.526,240.65 587.74,231.826 570.957,240.65 574.163,221.96 560.583,208.723 
+		579.349,205.996 	"/>
+		<polygon id="estrela_x5F_3_1_" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="653.74,188.992 
+		662.134,205.996 680.899,208.723 667.32,221.96 670.526,240.65 653.74,231.826 636.957,240.65 640.163,221.96 626.583,208.723 
+		645.349,205.996 	"/>
+		<polygon id="estrela_x5F_4_1_" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="558.74,241.992 
+		567.134,258.996 585.899,261.723 572.32,274.96 575.526,293.65 558.74,284.826 541.957,293.65 545.163,274.96 531.583,261.723 
+		550.349,258.996 	"/>
+		<polygon id="estrela_x5F_5_1_" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="623.74,241.992 
+		632.134,258.996 650.899,261.723 637.32,274.96 640.526,293.65 623.74,284.826 606.957,293.65 610.163,274.96 596.583,261.723 
+		615.349,258.996 "/>
+
+		<rect id="hit_1_"  style="cursor: pointer;" onclick="entrarFase(1)" x="481.951" y="179" opacity="0" fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-miterlimit="10" enable-background="new    " width="210" height="123"/>
+	</g>
+		<g id="btn_x5F_voltar" style="cursor: pointer;" onclick="window.location.href = '@Url.Content("~")Home/Index';">
+		<polygon fill="#FFFFFF" stroke="#000000" stroke-width="6" stroke-miterlimit="10" points="786.5,48.086 796.664,22.533 
+		925.022,22.533 939,48.086 936.457,103.84 931.375,122.424 795.396,115.455 787.77,99.193 	"/>
+		<text transform="matrix(1 0 0 1 801.3245 63.4893)" font-family="'KomikaAxis'" font-size="31.0855">Voltar</text>
+		<polygon points="839.651,95.669 856.74,81.766 856.74,90.745 877.305,91.324 879.043,85.821 872.96,79.738 880.491,72.208 
+		890.665,82.707 886.864,98.276 879.043,102.91 856.161,102.331 855.581,108.414 	"/>
+	</g>
+	<foreignObject x="0" y="0" width="960" height="560">
+		<body xmlns="http://www.w3.org/1999/xhtml">
+			@using (Html.BeginForm("Jogar", "Home", FormMethod.Post))
+			{
+				@Html.RadioButtonFor(m => m.IsFacil, true, new { style = " top: 500px; left: 400px;" })
+				@Html.RadioButtonFor(m => m.IsFacil, false, new { style = " top: 500px; left: 640px;" })
+				@Html.TextBoxFor(m => m.Escolida, new { style = "visibility: hidden;" })	
+
+			}
+
+		</body>
+	</foreignObject>
+</svg>

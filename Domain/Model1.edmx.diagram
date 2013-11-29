@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f756ed071e904ccea655c259fd17c450" Name="Diagram1" ZoomLevel="81" >
+        <EntityTypeShape EntityType="Model1.Usuario" Width="1.5" PointX="0.5" PointY="1.375" />
+        <EntityTypeShape EntityType="Model1.Acerto" Width="1.5" PointX="3.25" PointY="0.5" />
+        <EntityTypeShape EntityType="Model1.Solucao" Width="1.5" PointX="6.375" PointY="0.5" />
+        <EntityTypeShape EntityType="Model1.Cenario" Width="1.5" PointX="3.25" PointY="3.625" />
+        <EntityTypeShape EntityType="Model1.Fundo" Width="1.5" PointX="9.875" PointY="6.125" />
+        <EntityTypeShape EntityType="Model1.Imagem" Width="1.5" PointX="7.625" PointY="4.375" />
+        <EntityTypeShape EntityType="Model1.Formacao" Width="1.5" PointX="9.625" PointY="0.5" />
+        <EntityTypeShape EntityType="Model1.Silaba" Width="1.5" PointX="12.5" PointY="0.625" />
+        <EntityTypeShape EntityType="Model1.Objeto" Width="1.5" PointX="9.625" PointY="2.875" />
+        <EntityTypeShape EntityType="Model1.Figura" Width="1.5" PointX="12.625" PointY="3.125" />
+        <AssociationConnector Association="Model1.AcertoUsuario" />
+        <AssociationConnector Association="Model1.AcertoCenario" />
+        <AssociationConnector Association="Model1.AcertoSolucao" />
+        <AssociationConnector Association="Model1.CenarioSolucao" />
+        <AssociationConnector Association="Model1.CenarioFundo" />
+        <AssociationConnector Association="Model1.CenarioImagem" />
+        <AssociationConnector Association="Model1.FormacaoSilaba" />
+        <AssociationConnector Association="Model1.FormacaoSolucao" />
+        <AssociationConnector Association="Model1.ObjetoSolucao" />
+        <AssociationConnector Association="Model1.ObjetoFigura" />
+        <AssociationConnector Association="Model1.FiguraFundo" />
+        <AssociationConnector Association="Model1.FiguraImagem" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

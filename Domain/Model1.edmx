@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="UsuarioSet" EntityType="Model1.Store.UsuarioSet" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="AcertoSet" EntityType="Model1.Store.AcertoSet" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="SolucaoSet" EntityType="Model1.Store.SolucaoSet" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="CenarioSet" EntityType="Model1.Store.CenarioSet" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="FundoSet" EntityType="Model1.Store.FundoSet" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ImagemSet" EntityType="Model1.Store.ImagemSet" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="FormacaoSet" EntityType="Model1.Store.FormacaoSet" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="SilabaSet" EntityType="Model1.Store.SilabaSet" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="ObjetoSet" EntityType="Model1.Store.ObjetoSet" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="FiguraSet" EntityType="Model1.Store.FiguraSet" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="CenarioSolucao" EntityType="Model1.Store.CenarioSolucao" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <AssociationSet Name="AcertoUsuario" Association="Model1.Store.AcertoUsuario">
+      <End Role="Acerto" EntitySet="AcertoSet" />
+      <End Role="Usuario" EntitySet="UsuarioSet" />
+    </AssociationSet>
+    <AssociationSet Name="AcertoCenario" Association="Model1.Store.AcertoCenario">
+      <End Role="Acerto" EntitySet="AcertoSet" />
+      <End Role="Cenario" EntitySet="CenarioSet" />
+    </AssociationSet>
+    <AssociationSet Name="AcertoSolucao" Association="Model1.Store.AcertoSolucao">
+      <End Role="Acerto" EntitySet="AcertoSet" />
+      <End Role="Solucao" EntitySet="SolucaoSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CenarioSolucao_Cenario" Association="Model1.Store.FK_CenarioSolucao_Cenario">
+      <End Role="Cenario" EntitySet="CenarioSet" />
+      <End Role="CenarioSolucao" EntitySet="CenarioSolucao" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CenarioSolucao_Solucao" Association="Model1.Store.FK_CenarioSolucao_Solucao">
+      <End Role="Solucao" EntitySet="SolucaoSet" />
+      <End Role="CenarioSolucao" EntitySet="CenarioSolucao" />
+    </AssociationSet>
+    <AssociationSet Name="CenarioFundo" Association="Model1.Store.CenarioFundo">
+      <End Role="Cenario" EntitySet="CenarioSet" />
+      <End Role="Fundo" EntitySet="FundoSet" />
+    </AssociationSet>
+    <AssociationSet Name="CenarioImagem" Association="Model1.Store.CenarioImagem">
+      <End Role="Cenario" EntitySet="CenarioSet" />
+      <End Role="Imagem" EntitySet="ImagemSet" />
+    </AssociationSet>
+    <AssociationSet Name="FormacaoSilaba" Association="Model1.Store.FormacaoSilaba">
+      <End Role="Formacao" EntitySet="FormacaoSet" />
+      <End Role="Silaba" EntitySet="SilabaSet" />
+    </AssociationSet>
+    <AssociationSet Name="FormacaoSolucao" Association="Model1.Store.FormacaoSolucao">
+      <End Role="Formacao" EntitySet="FormacaoSet" />
+      <End Role="Solucao" EntitySet="SolucaoSet" />
+    </AssociationSet>
+    <AssociationSet Name="ObjetoSolucao" Association="Model1.Store.ObjetoSolucao">
+      <End Role="Objeto" EntitySet="ObjetoSet" />
+      <End Role="Solucao" EntitySet="SolucaoSet" />
+    </AssociationSet>
+    <AssociationSet Name="ObjetoFigura" Association="Model1.Store.ObjetoFigura">
+      <End Role="Objeto" EntitySet="ObjetoSet" />
+      <End Role="Figura" EntitySet="FiguraSet" />
+    </AssociationSet>
+    <AssociationSet Name="FiguraFundo" Association="Model1.Store.FiguraFundo">
+      <End Role="Figura" EntitySet="FiguraSet" />
+      <End Role="Fundo" EntitySet="FundoSet" />
+    </AssociationSet>
+    <AssociationSet Name="FiguraImagem" Association="Model1.Store.FiguraImagem">
+      <End Role="Figura" EntitySet="FiguraSet" />
+      <End Role="Imagem" EntitySet="ImagemSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="UsuarioSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Idade" Type="smallint" Nullable="false" />
+    <Property Name="Sexo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Serie" Type="smallint" Nullable="true" />
+    <Property Name="Senha" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AcertoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usuario_Id" Type="int" Nullable="false" />
+    <Property Name="Cenario_Id" Type="int" Nullable="false" />
+    <Property Name="Solucao_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SolucaoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Objeto_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CenarioSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DicaEscrita" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="DicaFalada" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Fundo_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FundoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Som" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Figura_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ImagemSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Altura" Type="float" Nullable="false" />
+    <Property Name="Largura" Type="float" Nullable="false" />
+    <Property Name="PosX" Type="float" Nullable="false" />
+    <Property Name="PosY" Type="float" Nullable="false" />
+    <Property Name="Fala" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Som" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Momento" Type="smallint" Nullable="false" />
+    <Property Name="Cenario_Id" Type="int" Nullable="false" />
+    <Property Name="Figura_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FormacaoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ordem" Type="smallint" Nullable="false" />
+    <Property Name="Som" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Silaba_Id" Type="int" Nullable="false" />
+    <Property Name="Solucao_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SilabaSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Letras" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ObjetoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Palavra" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Som" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Figura_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FiguraSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Path" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CenarioSolucao">
+    <Key>
+      <PropertyRef Name="Cenario_Id" />
+      <PropertyRef Name="Solucao_Id" />
+    </Key>
+    <Property Name="Cenario_Id" Type="int" Nullable="false" />
+    <Property Name="Solucao_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="AcertoUsuario">
+    <End Role="Acerto" Type="Model1.Store.AcertoSet" Multiplicity="*" />
+    <End Role="Usuario" Type="Model1.Store.UsuarioSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Acerto">
+        <PropertyRef Name="Usuario_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AcertoCenario">
+    <End Role="Acerto" Type="Model1.Store.AcertoSet" Multiplicity="*" />
+    <End Role="Cenario" Type="Model1.Store.CenarioSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Cenario">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Acerto">
+        <PropertyRef Name="Cenario_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AcertoSolucao">
+    <End Role="Acerto" Type="Model1.Store.AcertoSet" Multiplicity="*" />
+    <End Role="Solucao" Type="Model1.Store.SolucaoSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Solucao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Acerto">
+        <PropertyRef Name="Solucao_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CenarioFundo">
+    <End Role="Cenario" Type="Model1.Store.CenarioSet" Multiplicity="*" />
+    <End Role="Fundo" Type="Model1.Store.FundoSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Fundo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cenario">
+        <PropertyRef Name="Fundo_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CenarioImagem">
+    <End Role="Cenario" Type="Model1.Store.CenarioSet" Multiplicity="1" />
+    <End Role="Imagem" Type="Model1.Store.ImagemSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cenario">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Imagem">
+        <PropertyRef Name="Cenario_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FormacaoSilaba">
+    <End Role="Formacao" Type="Model1.Store.FormacaoSet" Multiplicity="*" />
+    <End Role="Silaba" Type="Model1.Store.SilabaSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Silaba">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Formacao">
+        <PropertyRef Name="Silaba_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FormacaoSolucao">
+    <End Role="Formacao" Type="Model1.Store.FormacaoSet" Multiplicity="*" />
+    <End Role="Solucao" Type="Model1.Store.SolucaoSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Solucao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Formacao">
+        <PropertyRef Name="Solucao_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ObjetoSolucao">
+    <End Role="Objeto" Type="Model1.Store.ObjetoSet" Multiplicity="1" />
+    <End Role="Solucao" Type="Model1.Store.SolucaoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Objeto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Solucao">
+        <PropertyRef Name="Objeto_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ObjetoFigura">
+    <End Role="Objeto" Type="Model1.Store.ObjetoSet" Multiplicity="*" />
+    <End Role="Figura" Type="Model1.Store.FiguraSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Figura">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Objeto">
+        <PropertyRef Name="Figura_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FiguraFundo">
+    <End Role="Figura" Type="Model1.Store.FiguraSet" Multiplicity="1" />
+    <End Role="Fundo" Type="Model1.Store.FundoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Figura">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Fundo">
+        <PropertyRef Name="Figura_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FiguraImagem">
+    <End Role="Figura" Type="Model1.Store.FiguraSet" Multiplicity="1" />
+    <End Role="Imagem" Type="Model1.Store.ImagemSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Figura">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Imagem">
+        <PropertyRef Name="Figura_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CenarioSolucao_Cenario">
+    <End Role="Cenario" Type="Model1.Store.CenarioSet" Multiplicity="1" />
+    <End Role="CenarioSolucao" Type="Model1.Store.CenarioSolucao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cenario">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CenarioSolucao">
+        <PropertyRef Name="Cenario_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CenarioSolucao_Solucao">
+    <End Role="CenarioSolucao" Type="Model1.Store.CenarioSolucao" Multiplicity="*" />
+    <End Role="Solucao" Type="Model1.Store.SolucaoSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Solucao">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CenarioSolucao">
+        <PropertyRef Name="Solucao_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="UsuarioSet" EntityType="Model1.Usuario" />
+          <EntitySet Name="AcertoSet" EntityType="Model1.Acerto" />
+          <EntitySet Name="SolucaoSet" EntityType="Model1.Solucao" />
+          <EntitySet Name="CenarioSet" EntityType="Model1.Cenario" />
+          <EntitySet Name="FundoSet" EntityType="Model1.Fundo" />
+          <EntitySet Name="ImagemSet" EntityType="Model1.Imagem" />
+          <EntitySet Name="FormacaoSet" EntityType="Model1.Formacao" />
+          <EntitySet Name="SilabaSet" EntityType="Model1.Silaba" />
+          <EntitySet Name="ObjetoSet" EntityType="Model1.Objeto" />
+          <EntitySet Name="FiguraSet" EntityType="Model1.Figura" />
+          <AssociationSet Name="AcertoUsuario" Association="Model1.AcertoUsuario">
+            <End Role="Acerto" EntitySet="AcertoSet" />
+            <End Role="Usuario" EntitySet="UsuarioSet" />
+          </AssociationSet>
+          <AssociationSet Name="AcertoCenario" Association="Model1.AcertoCenario">
+            <End Role="Acerto" EntitySet="AcertoSet" />
+            <End Role="Cenario" EntitySet="CenarioSet" />
+          </AssociationSet>
+          <AssociationSet Name="AcertoSolucao" Association="Model1.AcertoSolucao">
+            <End Role="Acerto" EntitySet="AcertoSet" />
+            <End Role="Solucao" EntitySet="SolucaoSet" />
+          </AssociationSet>
+          <AssociationSet Name="CenarioSolucao" Association="Model1.CenarioSolucao">
+            <End Role="Cenario" EntitySet="CenarioSet" />
+            <End Role="Solucao" EntitySet="SolucaoSet" />
+          </AssociationSet>
+          <AssociationSet Name="CenarioFundo" Association="Model1.CenarioFundo">
+            <End Role="Cenario" EntitySet="CenarioSet" />
+            <End Role="Fundo" EntitySet="FundoSet" />
+          </AssociationSet>
+          <AssociationSet Name="CenarioImagem" Association="Model1.CenarioImagem">
+            <End Role="Cenario" EntitySet="CenarioSet" />
+            <End Role="Imagem" EntitySet="ImagemSet" />
+          </AssociationSet>
+          <AssociationSet Name="FormacaoSilaba" Association="Model1.FormacaoSilaba">
+            <End Role="Formacao" EntitySet="FormacaoSet" />
+            <End Role="Silaba" EntitySet="SilabaSet" />
+          </AssociationSet>
+          <AssociationSet Name="FormacaoSolucao" Association="Model1.FormacaoSolucao">
+            <End Role="Formacao" EntitySet="FormacaoSet" />
+            <End Role="Solucao" EntitySet="SolucaoSet" />
+          </AssociationSet>
+          <AssociationSet Name="ObjetoSolucao" Association="Model1.ObjetoSolucao">
+            <End Role="Objeto" EntitySet="ObjetoSet" />
+            <End Role="Solucao" EntitySet="SolucaoSet" />
+          </AssociationSet>
+          <AssociationSet Name="ObjetoFigura" Association="Model1.ObjetoFigura">
+            <End Role="Objeto" EntitySet="ObjetoSet" />
+            <End Role="Figura" EntitySet="FiguraSet" />
+          </AssociationSet>
+          <AssociationSet Name="FiguraFundo" Association="Model1.FiguraFundo">
+            <End Role="Figura" EntitySet="FiguraSet" />
+            <End Role="Fundo" EntitySet="FundoSet" />
+          </AssociationSet>
+          <AssociationSet Name="FiguraImagem" Association="Model1.FiguraImagem">
+            <End Role="Figura" EntitySet="FiguraSet" />
+            <End Role="Imagem" EntitySet="ImagemSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" Nullable="false" />
+          <Property Type="Int16" Name="Idade" Nullable="false" />
+          <Property Type="String" Name="Sexo" Nullable="false" />
+          <Property Type="Int16" Name="Serie" Nullable="true" />
+          <Property Type="String" Name="Senha" Nullable="false" />
+          <NavigationProperty Name="Acerto" Relationship="Model1.AcertoUsuario" FromRole="Usuario" ToRole="Acerto" />
+        </EntityType>
+        <EntityType Name="Acerto">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Usuario" Relationship="Model1.AcertoUsuario" FromRole="Acerto" ToRole="Usuario" />
+          <NavigationProperty Name="Cenario" Relationship="Model1.AcertoCenario" FromRole="Acerto" ToRole="Cenario" />
+          <NavigationProperty Name="Solucao" Relationship="Model1.AcertoSolucao" FromRole="Acerto" ToRole="Solucao" />
+        </EntityType>
+        <EntityType Name="Solucao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Acerto" Relationship="Model1.AcertoSolucao" FromRole="Solucao" ToRole="Acerto" />
+          <NavigationProperty Name="Cenario" Relationship="Model1.CenarioSolucao" FromRole="Solucao" ToRole="Cenario" />
+          <NavigationProperty Name="Formacao" Relationship="Model1.FormacaoSolucao" FromRole="Solucao" ToRole="Formacao" />
+          <NavigationProperty Name="Objeto" Relationship="Model1.ObjetoSolucao" FromRole="Solucao" ToRole="Objeto" />
+        </EntityType>
+        <EntityType Name="Cenario">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" Nullable="false" />
+          <Property Type="String" Name="DicaEscrita" Nullable="true" />
+          <Property Type="String" Name="DicaFalada" Nullable="true" />
+          <NavigationProperty Name="Acerto" Relationship="Model1.AcertoCenario" FromRole="Cenario" ToRole="Acerto" />
+          <NavigationProperty Name="Solucao" Relationship="Model1.CenarioSolucao" FromRole="Cenario" ToRole="Solucao" />
+          <NavigationProperty Name="Fundo" Relationship="Model1.CenarioFundo" FromRole="Cenario" ToRole="Fundo" />
+          <NavigationProperty Name="Imagem" Relationship="Model1.CenarioImagem" FromRole="Cenario" ToRole="Imagem" />
+        </EntityType>
+        <EntityType Name="Fundo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Som" Nullable="false" />
+          <NavigationProperty Name="Cenario" Relationship="Model1.CenarioFundo" FromRole="Fundo" ToRole="Cenario" />
+          <NavigationProperty Name="Figura" Relationship="Model1.FiguraFundo" FromRole="Fundo" ToRole="Figura" />
+        </EntityType>
+        <EntityType Name="Imagem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Double" Name="Altura" Nullable="false" />
+          <Property Type="Double" Name="Largura" Nullable="false" />
+          <Property Type="Double" Name="PosX" Nullable="false" />
+          <Property Type="Double" Name="PosY" Nullable="false" />
+          <Property Type="String" Name="Fala" Nullable="true" />
+          <Property Type="String" Name="Som" Nullable="true" />
+          <Property Type="Int16" Name="Momento" Nullable="false" />
+          <NavigationProperty Name="Cenario" Relationship="Model1.CenarioImagem" FromRole="Imagem" ToRole="Cenario" />
+          <NavigationProperty Name="Figura" Relationship="Model1.FiguraImagem" FromRole="Imagem" ToRole="Figura" />
+        </EntityType>
+        <EntityType Name="Formacao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int16" Name="Ordem" Nullable="false" />
+          <Property Type="String" Name="Som" Nullable="true" />
+          <NavigationProperty Name="Silaba" Relationship="Model1.FormacaoSilaba" FromRole="Formacao" ToRole="Silaba" />
+          <NavigationProperty Name="Solucao" Relationship="Model1.FormacaoSolucao" FromRole="Formacao" ToRole="Solucao" />
+        </EntityType>
+        <EntityType Name="Silaba">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Letras" Nullable="false" />
+          <NavigationProperty Name="Formacao" Relationship="Model1.FormacaoSilaba" FromRole="Silaba" ToRole="Formacao" />
+        </EntityType>
+        <EntityType Name="Objeto">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Palavra" Nullable="true" />
+          <Property Type="String" Name="Som" Nullable="true" />
+          <NavigationProperty Name="Solucao" Relationship="Model1.ObjetoSolucao" FromRole="Objeto" ToRole="Solucao" />
+          <NavigationProperty Name="Figura" Relationship="Model1.ObjetoFigura" FromRole="Objeto" ToRole="Figura" />
+        </EntityType>
+        <EntityType Name="Figura">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Path" Nullable="false" />
+          <NavigationProperty Name="Objeto" Relationship="Model1.ObjetoFigura" FromRole="Figura" ToRole="Objeto" />
+          <NavigationProperty Name="Fundo" Relationship="Model1.FiguraFundo" FromRole="Figura" ToRole="Fundo" />
+          <NavigationProperty Name="Imagem" Relationship="Model1.FiguraImagem" FromRole="Figura" ToRole="Imagem" />
+        </EntityType>
+        <Association Name="AcertoUsuario">
+          <End Type="Model1.Acerto" Role="Acerto" Multiplicity="*" />
+          <End Type="Model1.Usuario" Role="Usuario" Multiplicity="1" />
+        </Association>
+        <Association Name="AcertoCenario">
+          <End Type="Model1.Acerto" Role="Acerto" Multiplicity="*" />
+          <End Type="Model1.Cenario" Role="Cenario" Multiplicity="1" />
+        </Association>
+        <Association Name="AcertoSolucao">
+          <End Type="Model1.Acerto" Role="Acerto" Multiplicity="*" />
+          <End Type="Model1.Solucao" Role="Solucao" Multiplicity="1" />
+        </Association>
+        <Association Name="CenarioSolucao">
+          <End Type="Model1.Cenario" Role="Cenario" Multiplicity="*" />
+          <End Type="Model1.Solucao" Role="Solucao" Multiplicity="*" />
+        </Association>
+        <Association Name="CenarioFundo">
+          <End Type="Model1.Cenario" Role="Cenario" Multiplicity="*" />
+          <End Type="Model1.Fundo" Role="Fundo" Multiplicity="1" />
+        </Association>
+        <Association Name="CenarioImagem">
+          <End Type="Model1.Cenario" Role="Cenario" Multiplicity="1" />
+          <End Type="Model1.Imagem" Role="Imagem" Multiplicity="*" />
+        </Association>
+        <Association Name="FormacaoSilaba">
+          <End Type="Model1.Formacao" Role="Formacao" Multiplicity="*" />
+          <End Type="Model1.Silaba" Role="Silaba" Multiplicity="1" />
+        </Association>
+        <Association Name="FormacaoSolucao">
+          <End Type="Model1.Formacao" Role="Formacao" Multiplicity="*" />
+          <End Type="Model1.Solucao" Role="Solucao" Multiplicity="1" />
+        </Association>
+        <Association Name="ObjetoSolucao">
+          <End Type="Model1.Objeto" Role="Objeto" Multiplicity="1" />
+          <End Type="Model1.Solucao" Role="Solucao" Multiplicity="*" />
+        </Association>
+        <Association Name="ObjetoFigura">
+          <End Type="Model1.Objeto" Role="Objeto" Multiplicity="*" />
+          <End Type="Model1.Figura" Role="Figura" Multiplicity="1" />
+        </Association>
+        <Association Name="FiguraFundo">
+          <End Type="Model1.Figura" Role="Figura" Multiplicity="1" />
+          <End Type="Model1.Fundo" Role="Fundo" Multiplicity="*" />
+        </Association>
+        <Association Name="FiguraImagem">
+          <End Type="Model1.Figura" Role="Figura" Multiplicity="1" />
+          <End Type="Model1.Imagem" Role="Imagem" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="UsuarioSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Usuario)">
+        <MappingFragment StoreEntitySet="UsuarioSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Idade" ColumnName="Idade" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Serie" ColumnName="Serie" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AcertoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Acerto)">
+        <MappingFragment StoreEntitySet="AcertoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SolucaoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Solucao)">
+        <MappingFragment StoreEntitySet="SolucaoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CenarioSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Cenario)">
+        <MappingFragment StoreEntitySet="CenarioSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="DicaEscrita" ColumnName="DicaEscrita" />
+          <ScalarProperty Name="DicaFalada" ColumnName="DicaFalada" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FundoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Fundo)">
+        <MappingFragment StoreEntitySet="FundoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Som" ColumnName="Som" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImagemSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Imagem)">
+        <MappingFragment StoreEntitySet="ImagemSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Altura" ColumnName="Altura" />
+          <ScalarProperty Name="Largura" ColumnName="Largura" />
+          <ScalarProperty Name="PosX" ColumnName="PosX" />
+          <ScalarProperty Name="PosY" ColumnName="PosY" />
+          <ScalarProperty Name="Fala" ColumnName="Fala" />
+          <ScalarProperty Name="Som" ColumnName="Som" />
+          <ScalarProperty Name="Momento" ColumnName="Momento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormacaoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Formacao)">
+        <MappingFragment StoreEntitySet="FormacaoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Ordem" ColumnName="Ordem" />
+          <ScalarProperty Name="Som" ColumnName="Som" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SilabaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Silaba)">
+        <MappingFragment StoreEntitySet="SilabaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Letras" ColumnName="Letras" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObjetoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Objeto)">
+        <MappingFragment StoreEntitySet="ObjetoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Palavra" ColumnName="Palavra" />
+          <ScalarProperty Name="Som" ColumnName="Som" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FiguraSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Figura)">
+        <MappingFragment StoreEntitySet="FiguraSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AcertoUsuario" TypeName="Model1.AcertoUsuario" StoreEntitySet="AcertoSet">
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="Id" ColumnName="Usuario_Id" />
+      </EndProperty>
+      <EndProperty Name="Acerto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AcertoCenario" TypeName="Model1.AcertoCenario" StoreEntitySet="AcertoSet">
+      <EndProperty Name="Cenario">
+        <ScalarProperty Name="Id" ColumnName="Cenario_Id" />
+      </EndProperty>
+      <EndProperty Name="Acerto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AcertoSolucao" TypeName="Model1.AcertoSolucao" StoreEntitySet="AcertoSet">
+      <EndProperty Name="Solucao">
+        <ScalarProperty Name="Id" ColumnName="Solucao_Id" />
+      </EndProperty>
+      <EndProperty Name="Acerto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CenarioSolucao" TypeName="Model1.CenarioSolucao" StoreEntitySet="CenarioSolucao">
+      <EndProperty Name="Cenario">
+        <ScalarProperty Name="Id" ColumnName="Cenario_Id" />
+      </EndProperty>
+      <EndProperty Name="Solucao">
+        <ScalarProperty Name="Id" ColumnName="Solucao_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CenarioFundo" TypeName="Model1.CenarioFundo" StoreEntitySet="CenarioSet">
+      <EndProperty Name="Fundo">
+        <ScalarProperty Name="Id" ColumnName="Fundo_Id" />
+      </EndProperty>
+      <EndProperty Name="Cenario">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CenarioImagem" TypeName="Model1.CenarioImagem" StoreEntitySet="ImagemSet">
+      <EndProperty Name="Cenario">
+        <ScalarProperty Name="Id" ColumnName="Cenario_Id" />
+      </EndProperty>
+      <EndProperty Name="Imagem">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FormacaoSilaba" TypeName="Model1.FormacaoSilaba" StoreEntitySet="FormacaoSet">
+      <EndProperty Name="Silaba">
+        <ScalarProperty Name="Id" ColumnName="Silaba_Id" />
+      </EndProperty>
+      <EndProperty Name="Formacao">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FormacaoSolucao" TypeName="Model1.FormacaoSolucao" StoreEntitySet="FormacaoSet">
+      <EndProperty Name="Solucao">
+        <ScalarProperty Name="Id" ColumnName="Solucao_Id" />
+      </EndProperty>
+      <EndProperty Name="Formacao">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ObjetoSolucao" TypeName="Model1.ObjetoSolucao" StoreEntitySet="SolucaoSet">
+      <EndProperty Name="Objeto">
+        <ScalarProperty Name="Id" ColumnName="Objeto_Id" />
+      </EndProperty>
+      <EndProperty Name="Solucao">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ObjetoFigura" TypeName="Model1.ObjetoFigura" StoreEntitySet="ObjetoSet">
+      <EndProperty Name="Figura">
+        <ScalarProperty Name="Id" ColumnName="Figura_Id" />
+      </EndProperty>
+      <EndProperty Name="Objeto">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FiguraFundo" TypeName="Model1.FiguraFundo" StoreEntitySet="FundoSet">
+      <EndProperty Name="Figura">
+        <ScalarProperty Name="Id" ColumnName="Figura_Id" />
+      </EndProperty>
+      <EndProperty Name="Fundo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FiguraImagem" TypeName="Model1.FiguraImagem" StoreEntitySet="ImagemSet">
+      <EndProperty Name="Figura">
+        <ScalarProperty Name="Id" ColumnName="Figura_Id" />
+      </EndProperty>
+      <EndProperty Name="Imagem">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer>
+    <edmx:Connection>
+      <DesignerInfoPropertySet xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
